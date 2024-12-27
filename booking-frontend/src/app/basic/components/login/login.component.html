@@ -1,30 +1,27 @@
-<h2>Login</h2>
-<form nz-form [formGroup]="validateForm" class="login-form" (ngSubmit)="submitForm()">
-    <nz-form-item>
-      <nz-form-control nzErrorTip="Please input your Email!">
-        <nz-input-group nzPrefixIcon="user">
-          <input type="text" nz-input formControlName="email" placeholder="email" />
-        </nz-input-group>
-      </nz-form-control>
-    </nz-form-item>
-    <nz-form-item>
-      <nz-form-control nzErrorTip="Please input your Password!">
-        <nz-input-group nzPrefixIcon="lock">
-          <input type="password" nz-input formControlName="password" placeholder="Password" />
-        </nz-input-group>
-      </nz-form-control>
-    </nz-form-item>
-    <div nz-row class="login-form-margin">
-      <div nz-col [nzSpan]="12">
-        <label nz-checkbox formControlName="remember">
-          <span>Remember me</span>
-        </label>
-      </div>
-      <div nz-col [nzSpan]="12">
-        <a class="login-form-forgot">Forgot password</a>
-      </div>
+  <div class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
+        <h2 class="text-2xl font-bold mb-6 text-center">Login</h2>
+        <form nz-form [formGroup]="validateForm" class="login-form" (ngSubmit)="submitForm()">
+          <nz-form-item>
+            <nz-form-control nzErrorTip="Please input your Email!">
+              <nz-input-group nzPrefixIcon="user">
+                <input type="text" nz-input formControlName="email" placeholder="email" />
+              </nz-input-group>
+            </nz-form-control>
+          </nz-form-item>
+          <nz-form-item>
+            <nz-form-control nzErrorTip="Please input your Password!">
+              <nz-input-group nzPrefixIcon="lock">
+                <input type="password" nz-input formControlName="password" placeholder="Password" />
+              </nz-input-group>
+            </nz-form-control>
+          </nz-form-item>
+          <button type="submit" class="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500">Login</button>
+        </form>
+        <div class="mt-6 text-center">
+            <p class="text-gray-700">Don't have an account? <a href="#" class="text-blue-500 hover:underline">Sign up</a></p>
+            <p class="text-gray-700 mt-2"><a href="#" class="text-blue-500 hover:underline">Forgot your password?</a></p>
+        </div>
     </div>
-    <button nz-button class="login-form-button login-form-margin" [nzType]="'primary'">Log in</button>
-    Or
-    <a>register now!</a>
-  </form>
+</div>
+

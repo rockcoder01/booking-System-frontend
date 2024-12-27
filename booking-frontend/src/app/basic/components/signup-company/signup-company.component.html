@@ -1,57 +1,57 @@
-<h2>Register Company</h2>
-<form nz-form [formGroup]="validateForm" class="login-form" (ngSubmit)="submitForm()">
+<div class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-lg">
+        <h2 class="text-2xl font-bold mb-6 text-center">Register Company</h2>
+        <form nz-form [formGroup]="validateForm" class="login-form" (ngSubmit)="submitForm()">
 
-    <nz-form-item>
-        <nz-form-label [nzSm]="6" [nzXs]="24" nzRequired nzFor="name">Name</nz-form-label>
-        <nz-form-control nzHasFeedback [nzSm]="14" [nzXs]="24" nzErrorTip="The input is not valid Name!">
-            <input nz-input formControlName="name" id="name" />
-        </nz-form-control>
-    </nz-form-item>
+            <nz-form-item>
+                <nz-form-label [nzSm]="6" [nzXs]="24" nzRequired nzFor="name">Name</nz-form-label>
+                <nz-form-control nzHasFeedback [nzSm]="14" [nzXs]="24" nzErrorTip="The input is not valid Name!">
+                    <input nz-input formControlName="name" id="name"  placeholder="Enter Name"/>
+                </nz-form-control>
+            </nz-form-item>
 
-    <nz-form-item>
-        <nz-form-label [nzSm]="6" [nzXs]="24" nzRequired nzFor="address">Address</nz-form-label>
-        <nz-form-control nzHasFeedback [nzSm]="14" [nzXs]="24" nzErrorTip="The input is not valid Address!">
-            <input nz-input formControlName="address" id="address" />
-        </nz-form-control>
-    </nz-form-item>
+            <nz-form-item>
+                <nz-form-label [nzSm]="6" [nzXs]="24" nzRequired nzFor="address">Address</nz-form-label>
+                <nz-form-control nzHasFeedback [nzSm]="14" [nzXs]="24" nzErrorTip="The input is not valid Address!">
+                    <input nz-input formControlName="address" id="address" placeholder="Enter Address" />
+                </nz-form-control>
+            </nz-form-item>
 
-    <nz-form-item>
-        <nz-form-label [nzSm]="6" [nzXs]="24" nzRequired nzFor="email">E-mail</nz-form-label>
-        <nz-form-control nzHasFeedback [nzSm]="14" [nzXs]="24" nzErrorTip="The input is not valid E-mail!">
-            <input nz-input formControlName="email" id="email" />
-        </nz-form-control>
-    </nz-form-item>
-    <nz-form-item>
-        <nz-form-label [nzSm]="6" [nzXs]="24" nzRequired nzFor="password">Password</nz-form-label>
-        <nz-form-control nzHasFeedback [nzSm]="14" [nzXs]="24" nzErrorTip="The input is not valid E-mail!">
-            <input nz-input formControlName="password" id="password" />
-        </nz-form-control>
-    </nz-form-item>
+            <nz-form-item>
+                <nz-form-label [nzSm]="6" [nzXs]="24" nzRequired nzFor="email">E-mail</nz-form-label>
+                <nz-form-control nzHasFeedback [nzSm]="14" [nzXs]="24" nzErrorTip="The input is not valid E-mail!">
+                    <input nz-input formControlName="email" id="email"  placeholder="Enter Email"/>
+                </nz-form-control>
+            </nz-form-item>
+            <nz-form-item>
+                <nz-form-label [nzSm]="6" [nzXs]="24" nzRequired nzFor="password">Password</nz-form-label>
+                <nz-form-control nzHasFeedback [nzSm]="14" [nzXs]="24" nzErrorTip="The input is not valid E-mail!">
+                    <input nz-input formControlName="password" id="password"  placeholder="Enter Password"/>
+                </nz-form-control>
+            </nz-form-item>
 
-    <nz-form-item>
-        <nz-form-label [nzSm]="6" [nzXs]="24" nzFor="checkPassword">Check Password</nz-form-label>
-        <nz-form-control nzHasFeedback [nzSm]="14" [nzXs]="24" nzErrorTip="The input is not valid CheckPassword!">
-            <input nz-input formControlName="checkPassword" id="checkPassword" />
-        </nz-form-control>
-    </nz-form-item>
+            <nz-form-item>
+                <nz-form-label [nzSm]="6" [nzXs]="24" nzFor="checkPassword">Confirm Password</nz-form-label>
+                <nz-form-control nzHasFeedback [nzSm]="14" [nzXs]="24"
+                    nzErrorTip="The input is not valid CheckPassword!">
+                    <input nz-input formControlName="checkPassword" id="checkPassword" placeholder="Enter Confirm Password" />
+                </nz-form-control>
+            </nz-form-item>
 
 
-    <nz-form-item>
-        <nz-form-label [nzSm]="6" [nzXs]="24" nzRequired nzFor="phone">Phone</nz-form-label>
-        <nz-form-control nzHasFeedback [nzSm]="14" [nzXs]="24" nzErrorTip="The input is not valid Phone!">
-            <input nz-input formControlName="phone" id="phone" />
-        </nz-form-control>
-    </nz-form-item>
+            <nz-form-item>
+                <nz-form-label [nzSm]="6" [nzXs]="24" nzRequired nzFor="phone">Phone</nz-form-label>
+                <nz-form-control nzHasFeedback [nzSm]="14" [nzXs]="24" nzErrorTip="The input is not valid Phone!">
+                    <input nz-input formControlName="phone" id="phone"  placeholder="Enter Confirm Phone" />
+                </nz-form-control>
+            </nz-form-item>
 
-    <!-- <div nz-row class="login-form-margin">
-      
-      <div nz-col [nzSpan]="12">
-        <a class="login-form-forgot">Forgot password</a>
-      </div>
-    </div> -->
-    <nz-form-item nz-row class="register-area">
-        <nz-form-control [nzSpan]="14" [nzOffset]="6">
-          <button nz-button nzType="primary">Register</button>
-        </nz-form-control>
-      </nz-form-item>
-</form>
+       
+            <nz-form-item nz-row class="register-area">
+                <nz-form-control [nzSpan]="14" [nzOffset]="6">
+                    <button nz-button nzType="primary">Register</button>
+                </nz-form-control>
+            </nz-form-item>
+        </form>
+    </div>
+</div>

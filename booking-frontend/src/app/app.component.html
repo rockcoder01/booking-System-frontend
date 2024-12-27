@@ -13,45 +13,63 @@
     </div>
   </div>
 </nav> -->
-<nz-layout>
-  <nz-sider nzCollapsible [(nzCollapsed)]="isCollapsed" [nzTrigger]="null">
-    <div class="logo" style="color: white; font-weight: bold;padding-top: 5px;">Booking Service System</div>
-    <ul nz-menu nzTheme="dark" nzMode="inline">
-      <!-- <li nz-submenu nzTitle="User" nzIcon="user">
-        <ul>
-          <li nz-menu-item>Tom</li>
-          <li nz-menu-item>Bill</li>
-          <li nz-menu-item>Alex</li>
-        </ul>
-      </li>
-      <li nz-submenu nzTitle="Team" nzIcon="team">
-        <ul>
-          <li nz-menu-item>Team 1</li>
-          <li nz-menu-item>Team 2</li>
-        </ul>
-      </li> -->
-      <li nz-menu-item>
-        <span nz-icon nzType="team"></span>
-        <span>Client</span>
-      </li>
-    </ul>
-  </nz-sider>
-  <nz-layout>
-    <nz-header>
-      <span
-        class="trigger"
-        nz-icon
-        [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'"
-        (click)="isCollapsed = !isCollapsed"
-      ></span>
-    </nz-header>
-    <nz-content>
-      <nz-breadcrumb>
-        <nz-breadcrumb-item>User</nz-breadcrumb-item>
-        <nz-breadcrumb-item>Bill</nz-breadcrumb-item>
-      </nz-breadcrumb>
-      <div class="inner-content"><router-outlet></router-outlet></div>
-    </nz-content>
-    <nz-footer>Ant Design ©2020 Implement By Angular</nz-footer>
-  </nz-layout>
-</nz-layout>
+<header class="bg-blue-600 text-white py-4">
+  <div class="container mx-auto flex justify-between items-center">
+    <div class="flex items-center">
+      <img alt="Company logo with a stylized icon representing booking services" class="h-12 w-12 mr-3" height="50"
+        src="https://storage.googleapis.com/a1aa/image/mHV6xUekb30BXSbyevUO6pwfEkoQu43DzKP23VV9MQGJVDePB.jpg"
+        width="50" />
+      <h1 class="text-2xl font-bold">
+        Booking Service
+      </h1>
+    </div>
+    <nav class="flex space-x-4" *ngIf="!isLoginClient && !isLoginCompany" >
+      <a class="hover:underline" routerLink="/home"
+        routerLinkActive="active  px-4 py-2 bg-white text-blue-600 rounded-lg hover:bg-gray-200">
+        Home
+      </a>
+      <a class="hover:underline" routerLink="/login1"
+        routerLinkActive="active  px-4 py-2 bg-white text-blue-600 rounded-lg hover:bg-gray-200">
+        Services
+      </a>
+      <a class="hover:underline" routerLink="/login2"
+        routerLinkActive="active  px-4 py-2 bg-white text-blue-600 rounded-lg hover:bg-gray-200">
+        About Us
+      </a>
+      <a class="hover:underline" routerLink="/login3"
+        routerLinkActive="active  px-4 py-2 bg-white text-blue-600 rounded-lg hover:bg-gray-200">
+        Contact
+      </a>
+    </nav>
+
+    <nav class="flex space-x-4" *ngIf="isLoginClient">
+      <a class="hover:underline" routerLink="/"
+        routerLinkActive="active  px-4 py-2 bg-white text-blue-600 rounded-lg hover:bg-gray-200">
+        Home
+      </a>
+      <a class="hover:underline" routerLink="/login1"
+        routerLinkActive="active  px-4 py-2 bg-white text-blue-600 rounded-lg hover:bg-gray-200">
+        Services
+      </a>
+      <a class="hover:underline" routerLink="/login2"
+        routerLinkActive="active  px-4 py-2 bg-white text-blue-600 rounded-lg hover:bg-gray-200">
+        About Us
+      </a>
+      <a class="hover:underline" routerLink="/login3"
+        routerLinkActive="active  px-4 py-2 bg-white text-blue-600 rounded-lg hover:bg-gray-200">
+        Contact
+      </a>
+    </nav>
+    <div class="flex items-center space-x-4" *ngIf="!isLoginUser">
+      <a class="hover:underline" routerLink="/login"
+        routerLinkActive="active  px-4 py-2 bg-white text-blue-600 rounded-lg hover:bg-gray-200">
+        Login
+      </a>
+      <a class="hover:underline" routerLink="/register-company"
+        routerLinkActive="active  px-4 py-2 bg-white text-blue-600 rounded-lg hover:bg-gray-200">
+        Sign Up
+      </a>
+    </div>
+  </div>
+</header>
+<router-outlet></router-outlet>
